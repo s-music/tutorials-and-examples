@@ -7,6 +7,7 @@
 ```
 .
 ├── git // Git研修用ドキュメント一式
+├── java // Java研修用ドキュメント一式
 ├── terminal // ターミナル研修用ドキュメント一式
 └── to-do-list // ToDoListアプリチュートリアル
     └── android // Android版
