@@ -6,6 +6,7 @@
 
 ```
 .
+├── terminal // ターミナル研修用ドキュメント一式
 └── to-do-list // ToDoListアプリチュートリアル
     └── android // Android版
         ├── base-project // TodoListアプリ作成時のベースプロジェクト
