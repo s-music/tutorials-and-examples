@@ -43,7 +43,7 @@
 
 #### タイトル(テキストボックス)
  
-- Placeholderに日付を設定(タイトル)
+- Placeholderに文字列を設定(タイトル)
 - Align Center Y: タイトル(ラベル)
 - Leading Space: タイトル(ラベル), 40
 - Align Trailing: Safe Area, 50
@@ -86,16 +86,16 @@
 - Align Trailing: 一番右の優先度(イメージ)
 - Top Space: 一番左の優先度(イメージ), 30
 
-#### 備考(ラベル)
+#### 詳細(ラベル)
 
 - Width: 35 
 - Height: 20
 - Align Leading: 優先度(ラベル)
 
-#### 備考(テキストエリア)
+#### 詳細(テキストエリア)
 
 - Textに文字列を設定(詳細を入力)
-- Top Space: 備考(ラベル), 40
+- Top Space: 詳細(ラベル), 40
 - Align Leading: Safe Area, 30
 - Align Trailing: Safe Area, 30
 - Align Bottom: Safe Area, 30
@@ -205,12 +205,12 @@ ctrlを押しながら閉じるボタンをAddToDoViewControllerのExitに対し
 ## ToDoの追加機能を実装する
 
 追加画面の作成と画面遷移を実装できたので、あとは実際にToDoのデータを作成する機能を実装するだけです。<br>
-まず、StoryBoard上で追加ボタンをAddNewToDoControllerに追加し、コードと紐付けを行います。<br>
+まず、StoryBoard上で追加ボタンをAddToDoViewControllerに追加し、コードと紐付けを行います。<br>
 
 ![xcode-6-6](./images/xcode-6-6.png)
 
 ```swift
-// /ToDoList/AddNewViewController.swift
+// /ToDoList/AddToDoViewController.swift
 // 省略
 
 @IBOutlet weak var addButton: UIBarButtonItem! // 追加ボタン
@@ -224,10 +224,10 @@ ctrlを押しながら閉じるボタンをAddToDoViewControllerのExitに対し
 まずは、画面遷移(Segue)にIDを振っていきます。<br>
 StoryBoardから追加ボタンのUnwindSegueのIdentifierにbackToMainByAddButtonを設定します。<br>
 次に、画面上で画面遷移が発生するたびに呼び出されるprepareという関数を定義します。<br>
-AddNewViewController.swfitに以下の記述を追加してください。<br>
+AddToDoViewController.swfitに以下の記述を追加してください。<br>
 
 ```swift
-// /ToDoList/AddNewViewController.swfit
+// /ToDoList/AddToDoViewController.swfit
 // 省略
 
 override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -240,7 +240,7 @@ override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 prepare関数内を以下のように修正してください。<br>
 
 ```swift
-// /ToDoList/AddNewViewController.swfit
+// /ToDoList/AddToDoViewController.swfit
 // 省略
 
 override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -269,7 +269,7 @@ Segueはdestinationというプロパティも持っており、これを利用�
 ※ ViewController側のToDo生成処理はあらかじめ削除しておいてください。<br>
 
 ```swift
-// /ToDoList/AddNewViewController.swfit
+// /ToDoList/AddToDoViewController.swfit
 // 省略
 
 override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -308,7 +308,7 @@ override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 以下のようにAddToDoViewController.swiftを修正してください。<br>
 
 ```swift
-// /ToDoList/AddNewViewController.swfit
+// /ToDoList/AddToDoViewController.swfit
 // 省略
 
 override func viewDidLoad() {

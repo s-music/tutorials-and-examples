@@ -110,7 +110,7 @@ func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> U
 
 func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
   let cell = tableView.dequeueReusableCell(withIdentifier: "ToDoTableCell") as! ToDoTableCell
-  cell.titleLablel.text = "aaa"
+  cell.titleLabel.text = "aaa"
   return cell
 }
 
@@ -265,16 +265,16 @@ override func viewDidLoad() {
   let toDo1 = ToDo()
   toDo1.title = "テスト1"
   // 1.登録日と期限を設定
-  toDo1.registrationDate = "2020/1/25".toDateByAppDefStyle() ?? Date()
-  toDo1.limitDate = "2020/2/25".toDateByAppDefStyle() ?? Date()
+  toDo1.registrationDate = "2020/12/10".toDateByAppDefStyle() ?? Date()
+  toDo1.limitDate = "2021/1/10".toDateByAppDefStyle() ?? Date()
   let toDo2 = ToDo()
   toDo2.title = "テスト2"
-  toDo2.registrationDate = "2020/1/26".toDateByAppDefStyle() ?? Date()
-  toDo2.limitDate = "2020/2/26".toDateByAppDefStyle() ?? Date()
+  toDo2.registrationDate = "2020/12/11".toDateByAppDefStyle() ?? Date()
+  toDo2.limitDate = "2021/1/11".toDateByAppDefStyle() ?? Date()
   let toDo3 = ToDo()
   toDo3.title = "テスト3"
-  toDo3.registrationDate = "2020/1/27".toDateByAppDefStyle() ?? Date()
-  toDo3.limitDate = "2020/2/27".toDateByAppDefStyle() ?? Date()
+  toDo3.registrationDate = "2020/12/12".toDateByAppDefStyle() ?? Date()
+  toDo3.limitDate = "2021/1/12".toDateByAppDefStyle() ?? Date()
   self.toDoList.append(toDo1)
   self.toDoList.append(toDo2)
   self.toDoList.append(toDo3)

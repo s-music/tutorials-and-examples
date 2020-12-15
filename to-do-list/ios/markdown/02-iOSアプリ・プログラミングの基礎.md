@@ -117,7 +117,7 @@ Main.storyboard上のButtonを選択し、ユーティリティエリアの一�
 
 #### 1.TextFieldを配置する
 
-ツールバーのLibraryボタンを押してメニューを表示し、Buttonをドラッグアンドドロップで画面に配置します。<br>
+ツールバーのLibraryボタンを押してメニューを表示し、Text Fieldをドラッグアンドドロップで画面に配置します。<br>
 
 ![xcode-2-6](./images/xcode-2-6.png)
 
