@@ -53,6 +53,7 @@
 - Width: 35 
 - Height: 20
 - Align Leading: タイトル(ラベル)
+- Top Space: タイトル(ラベル), 50
 
 #### 期限(テキストボックス)
 
@@ -66,6 +67,7 @@
 - Width: 60 
 - Height: 20
 - Align Leading: 期限(ラベル)
+- Top Space: 期限(ラベル), 50
 
 #### 優先度(イメージ)
 
@@ -91,6 +93,7 @@
 - Width: 35 
 - Height: 20
 - Align Leading: 優先度(ラベル)
+- Top Space: 優先度(スライダー), 50
 
 #### 詳細(テキストエリア)
 
