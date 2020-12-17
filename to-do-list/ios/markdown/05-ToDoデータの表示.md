@@ -309,7 +309,7 @@ func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> U
  - for in文を使って考えてみましょう。
  - 紐づけたpriorityCellsは配列です。
  - HiddenプロパティはBool型(On, Off)で、tureを設定した時に非表示になり、falseを設定した時に表示されます。
- - isHiddenでHiddenプロパティを操作できます。
+ - isHiddenでHiddenプロパティをそうさできます。
 
 <!-- Annotations -->
 [^1]:構造体は値型、クラスは参照型のデータ定義に使われます。

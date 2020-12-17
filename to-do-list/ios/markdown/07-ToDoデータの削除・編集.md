@@ -28,7 +28,7 @@ func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.Ed
 まずは、StoryBoard上で追加画面と同じように編集画面を作成し、<br>
 対応するコード(UpdateToDoViewController.swift)も作成してください。(内容はAddNewToDoViewControllerをそのままコピーすればよいですが、prepare関数の中身は全て削除し、フィールド名も調整します。)<br>
 <br>
-次に画面遷移の設定ですが、Segueは"Present Modally"を選択し、UpdateToDoViewController側のPresentationを"FullScreen"に設定します。<br>
+次に画面遷移の設定ですが、Segueは"Show"を選択し、UpdateToDoViewController側のPresentationを"FullScreen"に設定します。<br>
 
 ![xcode-7-1](./images/xcode-7-1.png)
 
