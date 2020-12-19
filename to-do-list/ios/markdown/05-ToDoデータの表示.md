@@ -54,7 +54,7 @@ ToDoデータの定義は完了したので、実際にToDoデータを生成し
 しかし、テーブルセルは可変個であり、一つ一つ紐づけを行なっていくことはできないため、コード上からテーブルセル上のUIパーツにアクセスするようにしますが、<br>
 今のままでは、テーブルセルそのもののプロパティをいじることはできても、中に配置されたUIパーツに対してアクセスすることができません。<br>
 そこで、Classの機能を利用し、StoryBoard上のテーブルセルが各UIパーツを保持することを定義します。<br>
-ToDoListディレクトリ(フォルダ)の中にToDoTable.swiftを作成し、以下のように記述を行なってください。<br>
+ToDoListディレクトリ(フォルダ)の中にToDoTableCell.swiftを作成し、以下のように記述を行なってください。<br>
 
 ```swift
 // /ToDoList/ToDoTableCell.swift
@@ -79,7 +79,7 @@ import UIKit
 
 class ToDoTableCell: UITableViewCell {
 
-  @IBOutlet weak var titleLablel: UILabel!
+  @IBOutlet weak var titleLabel: UILabel!
   @IBOutlet weak var registrationDateLabel: UILabel!
   @IBOutlet weak var limitDateLabel: UILabel!
   @IBOutlet var priorityStars: [UIImageView]!
@@ -143,7 +143,7 @@ func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> 
 func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
   let cell = tableView.dequeueReusableCell(withIdentifier: "ToDoTableCell") as! ToDoTableCell
   // 4.タイトルにToDoのタイトルの値を設定
-  cell.titleLablel.text = self.toDo.title
+  cell.titleLabel.text = self.toDo.title
   return cell
 }
 
@@ -194,7 +194,7 @@ func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> 
 func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
   let cell = tableView.dequeueReusableCell(withIdentifier: "ToDoTableCell") as! ToDoTableCell
   let toDo = self.toDoList[indexPath.row] // 4.配列からindexPath.row番目の要素を取得する。  
-  cell.titleLablel.text = toDo.title // 5.UIパーツに値を設定
+  cell.titleLabel.text = toDo.title // 5.UIパーツに値を設定
   return cell
 }
 
@@ -285,7 +285,7 @@ override func viewDidLoad() {
 func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
   let cell = tableView.dequeueReusableCell(withIdentifier: "ToDoTableCell") as! ToDoTableCell
   let toDo = self.toDoList[indexPath.row]
-  cell.titleLablel.text = toDo.title
+  cell.titleLabel.text = toDo.title
   // 2.日付ラベルにToDoの日付データを文字列に変換した値を設定
   cell.registrationDateLabel.text = toDo.registrationDate.toStrByAppDefStyle()
   cell.limitDateLabel.text = toDo.limitDate.toStrByAppDefStyle()
