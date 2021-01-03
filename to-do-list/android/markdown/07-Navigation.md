@@ -44,10 +44,6 @@ NavHostFragment自体は画面に表示されるようなレイアウトを持�
 
 またこの構造単位を**NavigationGraph**と言い、内容の大きなアプリでは画面遷移を複数のNavigationGraphに分類したりといった手法が取れますが、今回作るアプリでは一つで十分なので一つだけ使います。
 
-
-
-<!-- ここから担当水口 -->
-
 ## NavHostFragmentの追加
 
 まずはNavHostFragmentをMainActivityに配置してみましょう。activity_main.xmlを開いてください。
@@ -107,5 +103,3 @@ NavigationGraph画面で家マークが付いているFragmentは、NavHostFragm
 #### <img src="images/07/11.png" width="250">
 
 たった今追加されたFragmentに家マークが付いているので、アプリを起動すればこのFragmentが表示されるはずです。このFragmentのレイアウトファイルであるfragment_main.xmlを開いてみるとデフォルトでTextViewが置いてあるので、アプリを実行して実際にこのTextViewが表示されるか確かめてみましょう。
-
-<!-- ここで秋山さんから「画面遷移は後でやるので先にメイン画面のレイアウトを組む」ということの説明が入る -->

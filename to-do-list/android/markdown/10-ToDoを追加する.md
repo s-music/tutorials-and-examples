@@ -1,7 +1,5 @@
 # ToDoを追加する
 
-<!-- ここから担当水口 -->
-
 ## 追加画面のレイアウトの作成
 
 メイン画面 <-> 追加画面間でひとまず画面遷移ができるようになったので、次は追加画面のレイアウトを組んでいきます。
@@ -61,10 +59,6 @@
 なお『詳細』のTextViewは右側に他のViewが無いので、Barrierの中に入れる必要はありません。
 
 #### <img src="images/10/18.png" width="200"><img src="images/10/19.png" height="300">
-
-
-
-<!-- 『DatePickerDialogを表示する』の担当は秋山さん -->
 
 ## DatePickerDialogを表示する
 
@@ -127,10 +121,6 @@ fragment_add_to_do.xmlを開き、Attributesから**focusable**を探して**fal
 
 ここまでできましたらアプリを起動して、DatePickerDialogの動きを確かめてみましょう。
 
-
-
-<!-- 『SeekBarと星の表示/非表示を連動させる』の担当は秋山さん -->
-
 ## SeekBarと星の表示/非表示を連動させる
 
 次に、SeekBarを動かした時に星の表示数が変わるようにします。
@@ -172,8 +162,6 @@ v.priority_seek_bar.setOnSeekBarChangeListener(object: SeekBar.OnSeekBarChangeLi
 
 以上でToDoの記入が可能になったので、実際に記入されたToDoを追加する処理を構築しましょう。
 今回はアクションバー上に追加ボタンを作成して、タップしたら記入されたToDoをMainActivityの```toDoList```に追加し、メイン画面に戻るという流れでToDoの追加を行います。
-
-<!-- ここから担当水口 -->
 
 まずは以下のような**NavigationMenu**をapp/res/menuに作成して、表示をしてみましょう。
 ファイル名は**add.xml**とします。
@@ -267,8 +255,6 @@ override fun onOptionsItemSelected(item: MenuItem?): Boolean {
 
 ここまで記述できたら、アプリを起動して動きを確かめてみましょう。
 
-<!-- 『キーボードの動きを制御する』の担当は秋山さん -->
-
 ## キーボードの動きを制御する
 
 画面を移動した時にキーボードを閉じる処理を記述しましょう。
@@ -288,10 +274,6 @@ navController.addOnDestinationChangedListener { _, _, _ ->
 **Navigationによって画面遷移した時**に呼ばれるListenerメソッドを、Navigationを司るnavControllerに設定しています。
 
 アプリを起動して、動作を確かめてください。
-
-
-
-<!-- 『キーボードの動きを制御する』の担当は秋山さん -->
 
 ## 端末にデータを保存する
 

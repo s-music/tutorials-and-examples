@@ -117,10 +117,6 @@ ConstraintLayoutは制約を用いて要素を配置していくLayoutでした�
   　　　　  『（TextViewの）Startがparent（親Layout）のStartから0dp離れた位置に付く』
   　　　　  という意味になります。
 
-
-
-<!-- ここから担当水口 -->
-
 実際に１〜４の値を弄ってみると直感的に理解しやすいと思います。
 試しにTextViewを以下のような配置に変更してみましょう。
 
@@ -158,10 +154,6 @@ Buttonの左右それぞれのConstraintを、TextViewの同じく左右それ�
 #### <img src="images/05/16.png" width="200">
 
 この様に、Constraint Layoutでは要素と要素の間に様々な制約を付与することによって、柔軟なレイアウトが可能となっています。
-
-<!-- 担当水口ここまで -->
-
-
 
 ## GuidelineとBarrier
 
