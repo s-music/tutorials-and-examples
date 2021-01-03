@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.todolist.MainFragment"
+        android:label="ToDoリスト"
+        tools:layout="@layout/fragment_main">
+        <action
+            android:id="@+id/action_mainFragment_to_addToDoFragment"
+            app:destination="@id/addToDoFragment"
+            app:enterAnim="@anim/slide_from_right"
+            app:exitAnim="@anim/slide_to_left"
+            app:popEnterAnim="@anim/slide_from_left"
+            app:popExitAnim="@anim/slide_to_right" />
+        <action
+            android:id="@+id/action_mainFragment_to_editToDoFragment"
+            app:destination="@id/editToDoFragment"
+            app:enterAnim="@anim/slide_from_right"
+            app:exitAnim="@anim/slide_to_left"
+            app:popEnterAnim="@anim/slide_from_left"
+            app:popExitAnim="@anim/slide_to_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/addToDoFragment"
+        android:name="com.example.todolist.addToDoFragment"
+        android:label="ToDoの追加"
+        tools:layout="@layout/fragment_to_do_form" />
+    <fragment
+        android:id="@+id/editToDoFragment"
+        android:name="com.example.todolist.EditToDoFragment"
+        android:label="ToDoの編集"
+        tools:layout="@layout/fragment_edit_to_do" >
+        <argument
+            android:name="toDo"
+            app:argType="com.example.todolist.ToDo" />
+        <argument
+            android:name="index"
+            app:argType="integer" />
+    </fragment>
+</navigation>
