@@ -221,9 +221,9 @@ Optional\<String\>型 → String型の変換は`Optional値 ?? 値が取れな�
   let num1 = Int(textField.text ?? "") ?? 0
   let num2 = Int(textField2.text ?? "") ?? 0
   let num3 = Int(textField3.text ?? "") ?? 0
-  print(text)
-  print(text2)
-  print(text3)
+  print(num1)
+  print(num2)
+  print(num3)
 }
 ```
 
